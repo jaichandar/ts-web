@@ -1,12 +1,17 @@
 import './App.css';
-import { Button } from 'antd';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './pages/login/Login';
+
 
 function App() {
 
   return (
     <>
-      <p>Timesheet App</p>
-      <Button>Submit</Button>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

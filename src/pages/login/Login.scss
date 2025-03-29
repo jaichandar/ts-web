@@ -1,0 +1,50 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-wrapper {
+        min-height: 300px;
+        width: 400px;
+        border-radius: 3px;
+        padding: 10px;
+
+        .input-wrapper {
+            width: 100%;
+            min-height: 50px;
+            margin: 10px 0px;
+
+            .label {
+                display: block;
+                margin: 10px 0px;
+            }
+
+            .input {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .error {
+                font-size: 15px;
+                margin: 5px 0px;
+                color: red;
+            }
+        }
+
+        .btn-wrapper {
+            width: 100%;
+            margin: 20px 0px;
+
+            .btn {
+                padding: 10px;
+                width: 100%;
+                cursor: pointer;
+                border-radius: 3px;
+                border: none;
+                background: #142132;
+                color: #fff;
+            }
+        }
+    }
+}
