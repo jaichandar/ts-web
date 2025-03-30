@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // types
 import { formDetails } from './types';
 // style
@@ -7,6 +8,7 @@ import './Login.scss';
 const Login = () => {
     const [formData, setFormData] = useState<formDetails>({ email: '', password: '' });
     const [formError, setFormError] = useState<formDetails>({ email: '', password: '' });
+    const navigate = useNavigate();
 
     const handleOnSubmit = (e: React.FormEvent): void => {
         e.preventDefault();
@@ -15,7 +17,7 @@ const Login = () => {
         } else if (!formData.password) {
             setFormError((prev) => ({ ...prev, 'password': "Please Enter Password" }))
         } else {
-            console.log(formData);
+            navigate('/dashboard');
         }
     }
 
